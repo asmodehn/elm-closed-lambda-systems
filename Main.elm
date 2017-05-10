@@ -1,10 +1,12 @@
-import Calculator exposing (update, view)
-import StartApp.Simple exposing (start)
+import Html exposing (Html)
+import ClockModel exposing (init, update, subscriptions)
+import ClockView exposing (view)
 
 main =
-  start
-    { model = "350000"
+  Html.program
+    { init = init
     , update = update
     , view = view
+    , subscriptions = subscriptions
     }
 
